@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebDevAssignment</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+  <p class="toppara">Student Enrollment Form</p>
+        </div>
+        <div class="left">
+          <div class="form">
+            <div class="p-5">
+          <form id="enroll-form">
+                <div class="form-group row">
+                  <label for="name" class="col-sm-3 col-form-label">Name:</label>
+                  <div class="col-sm-5">
+                    <input type="text" class="form-control pl-3 ml-3 h-55 name" id="name1" >
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="email" class="col-sm-3 col-form-label">Email:</label>
+                  <div class="col-sm-5">
+                    <input type="email" class="form-control pl-3 ml-3 h-55" id="email" >
+                  </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="website" class="col-sm-3 col-form-label">Website:</label>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control pl-3 ml-3 h-55" id="web" >
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="imageurl" class="col-sm-3 col-form-label">Image Link:</label>
+                    <div class="col-sm-5">
+                      <input type="text" class="form-control pl-3 ml-3 h-55" id="imglink" >
+                    </div>
+                  </div>
+             
+                  <div class="form-group row ">
+                    <label for="gender" class="col-sm-2 mr-4 col-form-label">Gender:</label>
+                    <div class="col-sm-8 ">
+                      <div class="ml-5">
+                        <input class="form-check-input " type="radio" name="gender" id="male" value="male">
+                        <label class="form-check-label" for="male">Male</label>
+                      </div>
+                      <div class="ml-5">
+                        <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                        <label class="form-check-label" for="female">Female</label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group ">
+                    <label for="skills" class="mr-5 ">Skills</label>
+                    <div class="form-check-inline ml-5">
+                      <input class="form-check-input" type="checkbox" id="java" name="skill" value="java">
+                      <label class="form-check-label" for="java">
+                        Java
+                      </label>
+                    </div>
+                    <div class="form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="html" name="skill" value="html">
+                      <label class="form-check-label" for="html">
+                        HTML
+                      </label>
+                    </div>
+                    <div class="form-check-inline">
+                      <input class="form-check-input" type="checkbox" id="css" name="skill" value="css">
+                      <label class="form-check-label" for="css">
+                        CSS
+                      </label>
+                    </div>
+                  </div>
+                <button type="submit" class ="btn btn-primary mr-3" onclick="
+                let valid=validation();
+                if(valid)
+                addtodo()">Enroll Student</button>
+                <button type="submit" class ="btn btn-danger "
+                onclick="del()"
+                >Clear</button>
+                
+            <p id="error">Please Enter Valid Details</p>
+              </div>
+              </div>
+            </form>
+        </div>
+        <div class="right">
+         <p class="rightpara">Enrolled Students</p>
+         <div class="card">
+          <div class="header">
+         <div class="desc"> <p >Description</p></div>
+            <div class="img"><p >Image</p></div></div>
+         <div class="cards">
+        
+         </div>
+         </div>
+        </div>
+        <div class="bottom">    
+<p class="bottompara">Copyright 2023-2024 by Fresher Training</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
